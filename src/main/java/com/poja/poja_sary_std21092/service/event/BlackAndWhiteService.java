@@ -1,5 +1,6 @@
 package com.poja.poja_sary_std21092.service.event;
 
+import com.poja.poja_sary_std21092.repository.model.TransformationResult;
 import org.springframework.stereotype.Service;
 
 import javax.imageio.ImageIO;
@@ -39,6 +40,12 @@ public class BlackAndWhiteService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public TransformationResult fetchTransformationResult(String id) {
+        TransformationResult result = new TransformationResult();
+        result.setOriginalUrl("https://original.url");
+        result.setTransformedUrl("https://transformed.url");
+        return result;
     }
 }
 
